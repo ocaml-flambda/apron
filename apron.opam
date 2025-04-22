@@ -29,12 +29,13 @@ install: [
   [make "install"]
 ]
 depends: [
-  "ocaml"
-  "ocamlfind" {build}
-  "camlidl"
-  "mlgmpidl"
-  "ocamlbuild" {build}
-  "conf-perl"
+  "ocaml"  {= "4.14.1"}
+  "dune" {= "3.17.2"}
+  "ocamlfind" {= "1.9.8" & build}
+  "camlidl" {= "1.12"}
+  "mlgmpidl" {= "1.3.0"}
+  "ocamlbuild" {="0.16.1" & build}
+  "conf-perl" {= "2"}
 ]
 depopts: [
   "conf-ppl"
